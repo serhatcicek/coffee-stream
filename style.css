@@ -1,0 +1,57 @@
+/* style.css */
+html, body { margin:0; padding:0; overflow-x:hidden; }
+body { font-family:"Clear Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:#000; background:#fff; }
+
+.wrapper { width: 100%; min-height: 100vh; overflow: hidden; background: url('coffee-ba.png') no-repeat center / cover; position: relative; }
+
+/* Header/hero minimal */
+.header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px;}
+.desktop-menu ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.desktop-menu a{text-decoration:none;color:#000;opacity:.9;font-size:16px;font-weight:500}
+.desktop-menu a.active{color:#006143}
+.menu-icon{display:none;background:none;border:0;cursor:pointer}
+.menu-icon span{display:block;width:24px;height:3px;background:#000;margin:4px 0}
+.menu[hidden]{display:none}
+.menu{position:fixed;inset:0 0 0 auto;width:min(86vw,420px);background:#111;color:#fff;padding:24px;z-index:999}
+.menu-close{position:absolute;top:8px;right:12px;background:none;border:0;color:#fff;font-size:32px;line-height:1;cursor:pointer}
+.menu ul{list-style:none;margin:64px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.menu a{color:#fff;text-decoration:none;font-size:18px}
+.logo img{height:70px;width:auto;display:block}
+.hero{min-height:60vh;display:grid;place-items:center;text-align:center}
+.hero .hero-content h1{margin:0;font-size:56px;line-height:.95;color:white}
+.hero .hero-content p{margin:12px 0 0;opacity:.7;color:white}
+
+/* Yeşil alan + pattern + animasyon */
+.highlight-section{position:relative;width:100%;height:420px;background:#006143;z-index:10}
+.highlight-pattern{position:absolute;inset:0;background:url('pattern.png') repeat;opacity:1;pointer-events:none}
+
+.coffee-transition{position:absolute;top:-35%;left:50%;transform:translateX(-50%);z-index:15}
+.coffee-seed.transition-seed{width:250px;height:auto;position:relative;z-index:3}
+
+.steam-container.steam-lower{
+  position:absolute;bottom:100px;left:50%;transform:translateX(-50%);
+  width:200px;height:250px;overflow:visible;z-index:2;
+}
+.steam{
+  position:absolute;top:0;left:0;right:0;margin:0 auto;width:100%;
+  opacity:0;filter:blur(1px);animation:steamRise 5s linear infinite;
+}
+.steam2{animation-delay:2.5s}
+.steam3{animation-delay:4.5s}
+@keyframes steamRise{
+  0%{opacity:0;transform:translateY(50px) scale(1)}
+  20%{opacity:1}
+  80%{opacity:1;transform:translateY(-100px) scale(1.6)}
+  100%{opacity:0;transform:translateY(-120px) scale(1.8)}
+}
+
+/* Responsive */
+@media (max-width:900px){ .hero .hero-content h1{font-size:42px} }
+@media (max-width:720px){
+  .desktop-menu{display:none}
+  .menu-icon{display:block}
+  .logo img{height:60px}
+  .coffee-seed.transition-seed{width:200px}
+  .steam-container.steam-lower{width:160px;height:200px;bottom:80px}
+  .highlight-section{height:360px}
+}

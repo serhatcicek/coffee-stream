@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee-ba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Clear+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <nav class="desktop-menu" aria-label="Ana menü">
+        <ul>
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-icon" id="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="nav-menu" aria-label="Mobil menü" hidden>
+        <div class="menu-logo">
+          <img src="logo.png" alt="Coffee-ba Logo" width="120" height="120" loading="lazy">
+        </div>
+        <button class="menu-close" id="menu-close" aria-label="Menüyü kapat">&times;</button>
+        <ul>
+          <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        </ul>
+      </nav>
+
+      <a href="index.html" class="logo" aria-label="Coffee-ba anasayfa">
+        <img src="logo.png" alt="Coffee-ba" width="120" height="120">
+      </a>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title" style="text-align:center">BA<br> Seni Bekliyor!</h1>
+        <p>#CoffeeBa</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="highlight-section" aria-label="Kahve bölümü">
+    <div class="highlight-pattern" aria-hidden="true"></div>
+
+    <div class="coffee-transition">
+      <div class="steam-container steam-lower" aria-hidden="true">
+        <img src="coffee-smoke.png" class="steam steam1" alt="">
+        <img src="coffee-smoke.png" class="steam steam2" alt="">
+        <img src="coffee-smoke.png" class="steam steam3" alt="">
+      </div>
+
+      <img src="kahvecekirdegi.png" alt="Kahve Çekirdeği" class="coffee-seed transition-seed" loading="lazy">
+    </div>
+  </section>
+
+</body>
+</html>
